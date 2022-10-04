@@ -14,15 +14,16 @@ body, html {
   height: 100%;
   margin: 0;
   font-family: 'Rubik', sans-serif;
+  font-weight: 300;
 }
 
 /*Hide or display items in mobile-mode that are hidden or displayed in dektop-mode*/
 .hide-mobile {
-display: none;
+  display: none;
 }
 
 .show-mobile {
-display: initial;
+  display: initial;
 }
 
 /*Background image*/
@@ -152,9 +153,8 @@ display: initial;
 
 .menu-wrap .menu > div {
   background: var(--overlay-color);
-  border-radius: 50%;
-  width: 300vw;
-  height: 300vw;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex: none;
   align-items: center;
@@ -179,6 +179,7 @@ display: initial;
   padding: 4rem;
   font-style: bold;
   text-shadow:0px 5px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
 }
 
 .menu-wrap .menu > div > div > ul > li > a {
@@ -198,7 +199,7 @@ display: initial;
   border: solid;
   border-color: black;
   border-width: 4px;
-  position: relative;
+  position: absolute;
   left: 8%;
   top: 100px;
 }
@@ -208,6 +209,7 @@ display: initial;
   font-size: 3rem;
   margin-top: 10px;
   margin-bottom: 5px;
+  text-transform: uppercase;
 }
 
 .to-the-moon-box a {
@@ -226,7 +228,26 @@ display: initial;
   transform: translateX(50%);
 }
 
+.arrow-down {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  animation-name: arrow-bounce;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
 
+@keyframes arrow-bounce {
+  from {
+    bottom: 25px;
+  }
+  to {
+    bottom: 60px;}
+}
 
 /*Second page*/
 
@@ -242,6 +263,7 @@ display: initial;
   text-align: left;
   margin-left: 3rem;
   z-index: 1;
+  font-weight: 700;
 }
 
 .space-ventures h2 span:nth-of-type(2){
@@ -258,7 +280,6 @@ display: initial;
 
 .ground-control {
   width: 90%;
-  margin: left;
   position: absolute;
   margin-left: 2rem;
   margin-top: 10rem;
@@ -353,17 +374,20 @@ display: initial;
 }
 
 .cookie-box {
-  margin: auto;
   width: 100%;
-  position: absolute;
-  top: 198%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
   background-color: rgb(7, 7, 41);
   padding: 10px 0px;
 }
 
-.cookie-box p5 {
+.cookie-box p2 {
   font-size: 0.64rem;
-  color: rgb(210, 0, 162);
+  font-weight: 400;
+  color: rgb(170, 38, 97);
+  text-shadow: 0 0 5px rgb(170, 38, 97);
   padding: 0.75rem 0rem;
   margin-left: 10px;
 }
@@ -379,6 +403,7 @@ display: initial;
   position: absolute;
   right: 2rem;
   bottom: 0.7rem;
+  font-weight: 500;
 }
 
 .cookie-btn:hover {
@@ -392,203 +417,207 @@ display: initial;
 @media screen and (min-width: 800px) {
 
 /*To get rotated background in desktop-mode*/
-.image2{
-  visibility: none;
-}
+  .image2{
+    visibility: none;
+  }
 
-.image3 {
-  background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/raphael-nogueira-svbDI1Pq30s-unsplash_desktop.jpg);
-}
+  .image3 {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/raphael-nogueira-svbDI1Pq30s-unsplash_desktop.jpg);
+  }
 
 /*Adjust box on starting page*/
-.to-the-moon-box {
-  background: var(--overlay-color);
-  margin: left;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: left;
-  text-align: left;
-  width: 550px;
-  height: 550px;
-  border-style: solid;
-  border-width: 10px;
-  border-color: black;
-  font-size: 8rem;
-}
+  .to-the-moon-box {
+    background: var(--overlay-color);
+    margin: left;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+    width: 550px;
+    height: 550px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: black;
+    font-size: 8rem;
+  }
 
-.to-the-moon-box h1 {
-  font-size: 8rem;
-}
+  .to-the-moon-box h1 {
+    font-size: 8rem;
+  }
 
-.to-the-moon-box a {
-  display: inline-block;
-  text-align: right;
-  border: none;
-  color: black;
-  padding: 0.75rem 1.5rem;
-  margin-top: 1rem;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
+  .to-the-moon-box a {
+    display: inline-block;
+    text-align: right;
+    border: none;
+    color: black;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
 
 /*Adjust text in navigation menu*/
-.menu-wrap .menu > div > div > ul > li {
-  font-size: 5rem;
-  padding: 1rem;
-}
+  .menu-wrap .menu > div > div > ul > li {
+    font-size: 5rem;
+    padding: 1rem;
+  }
 
 /*Hide or display items in desktop-mode that are hidden or displayed in mobile-mode*/
-.desktop-show {
-  display: initial;
-}
+  .desktop-show {
+    display: initial;
+  }
 
-.desktop-hide {
-  display: none;
-}
+  .desktop-hide {
+    display: none;
+  }
 
 /*Grid setup*/
-.full-page {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
-  margin: 0 40px;
-}
+  .full-page {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin: 0 40px;
+  }
 
-.box-container{
-  grid-column: 1 / span 2;
-}
+  .box-container{
+    grid-column: 1 / span 2;
+  }
 
-.second-box-container {
-  grid-column: 4 / span 2;
-}
+  .second-box-container {
+    grid-column: 4 / span 2;
+  }
+
+  .arrow-down {
+    display: none;
+  }
 
 /*Adjust text on second page*/
-.full-page {
-  min-height: 100vh;
-}
+  .full-page {
+    min-height: 100vh;
+  }
 
-.box-container {
-  outline: 3px solid brown;
-}
+  .box-container {
+    max-height: 100vh;
+  }
 
-.second-box-container {
-  outline: 3px solid grey;
-}
+  .second-box-container {
+    max-height: 100vh;
+  }
 
-.space-ventures {
-  margin: left;
-  position: relative;
-}
+  .space-ventures {
+    margin: left;
+    position: relative;
+  }
 
-.space-ventures h2 span:first-of-type {
-  display: block;
-  position: relative;
-  z-index: 1;
-  font-family: 'Rubik', sans-serif;
-  font-size: 6.5vw;
-  color: white;
-}
+  .space-ventures h2 span:first-of-type {
+    display: block;
+    position: relative;
+    z-index: 1;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 6.5vw;
+    color: white;
+  }
 
-.space-ventures h2 span:nth-of-type(2){
-  position: relative;
-  top: -50px;
-  left: -55px;
-  z-index: 0;
-  font-family: 'Times New Roman', Times, serif;
-  font-style: bold;
-  font-size: 8vw;
-  color: grey;
-}
+  .space-ventures h2 span:nth-of-type(2){
+    position: relative;
+    top: -4vw;
+    z-index: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: bold;
+    font-size: 8vw;
+    color: grey;
+  }
 
-.ground-control {
-  position: relative;
-  top: -150px;
-}
+  .ground-control {
+    position: relative;
+    top: -150px;
+  }
 
-.ground-control h3{
-  position: relative;
-  font-size: 2vw;
-  color: white;
-}
+  .ground-control h3{
+    position: relative;
+    font-size: 2vw;
+    color: white;
+  }
 
-.ground-control p1{
-  position: relative;
-  font-size: 0.8vw;
-  color: white;
-  text-align: left;
-  letter-spacing: 1px;
-  line-height: 1.7;
-}
+  .ground-control p1{
+    position: relative;
+    font-size: 0.8vw;
+    color: white;
+    text-align: left;
+    letter-spacing: 1px;
+    line-height: 1.7;
+  }
 
-.quote1 {
-  left: 20px;
-  top: -510px;
-  position: relative;
-  color: white;
-  z-index: 1;
-  font-size: 1.5vw;
-}
+  .quote1 {
+    top: -510px;
+    position: relative;
+    color: white;
+    z-index: 1;
+    font-size: 1.3vw;
+  }
 
-.quote1:before { 
-  content: open-quote;
-  font-weight: bold;
-  font-size: 10vw;
-  color: white;
-  opacity: 30%;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  position:absolute;
-  margin-left: -3vw;
-  top: -4vw;
-} 
+  .quote1:before { 
+    content: open-quote;
+    font-weight: bold;
+    font-size: 10vw;
+    color: white;
+    opacity: 30%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position:absolute;
+    margin-left: -3vw;
+    top: -4vw;
+  } 
 
-.quote1:after { 
-  content: close-quote;
-  font-weight: bold;
-  font-size: 10vw;
-  color: white;
-  opacity: 30%;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  position:absolute;
-  left: 4vw;
-  top: 2vw;
-}
+  .quote1:after { 
+    content: close-quote;
+    font-weight: bold;
+    font-size: 10vw;
+    color: white;
+    opacity: 30%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position:absolute;
+    left: 4vw;
+    top: 2vw;
+  }
 
-.gradient-quote {
-  display: block;
-  font-size: 2vw;
-  background: linear-gradient(170deg, #6f2579, #9da07a, #6f2579);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 50%;
-  letter-spacing: 3px;
-  font-style: italic;
-  line-height: 1.3;
-  margin-top: 140px;
-}
+  .gradient-quote {
+    display: block;
+    font-size: 2vw;
+    background: linear-gradient(170deg, #6f2579, #9da07a, #6f2579);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 50%;
+    letter-spacing: 3px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.3;
+    margin-top: 140px;
+  }
 
-.text-cont{
-  position: relative;
-  font-size: 0.8vw;
-  color: white;
-  text-align: left;
-  letter-spacing: 1px;
-  top: -500px;
-  line-height: 1.7;
-}
+  .text-cont{
+    position: relative;
+    font-size: 0.8vw;
+    color: white;
+    text-align: left;
+    letter-spacing: 1px;
+    top: -500px;
+    line-height: 1.7;
+  }
 
 /*Major Tom image added to desktop-mode*/
-.major-tom {
-  display: block;
-  width: 100px;
-  height: auto;
-  float: right;
-  transform: rotate(3deg);
-  margin-right: 30px;
-}
+  .major-tom {
+    display: block;
+    width: 100px;
+    height: auto;
+    float: right;
+    transform: rotate(3deg);
+    margin-right: 30px;
+  }
 
 /*Adjust cookie box*/
-.cookie-box {
-  padding: 20px 0px;
-}
+  .cookie-box {
+    padding: 20px 0px;
+  }
 }
