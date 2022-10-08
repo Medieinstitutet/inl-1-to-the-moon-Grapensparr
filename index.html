@@ -17,21 +17,20 @@
     <div class="bg image1">
         <section class="full-page">
             <header>
-                <button class="menu-wrap">
-                    <input type="checkbox" class="toggler">
-                    <div class="hamburger"><div></div></div>
-                    <nav class="menu">
-                      <div>
-                        <div>
-                          <ul>
-                            <li><a href="#">Our story<br></a></li>
-                            <li><a href="#"><span>Space</span><br><span>ventures</span><br></a></li>
-                            <li><a href="#"><span>About <br> Major Tom</span></a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </nav>
-                </button>
+                <nav>
+                    <button aria-label="Toggle menu" id="menu-button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="¤">Our Story</a></li>
+                            <li><a href="¤">Space<br>Ventures</a></li>
+                            <li><a href="¤">About<br>Major Tom</a></li>
+                        </ul>
+                    </div>
+                </nav>
             </header>
             <div class="to-the-moon-box">
                 <h1>
@@ -94,10 +93,21 @@
     
     <div class="cookie-box">
         <p>
-            I don't know where I'm going from here, but I promise it won't be boring. <br class="show-mobile desktop-hide">You should accept cookies.
+            I don't know where I'm going from here, <br class="show-mobile desktop-hide">but I promise it won't be boring. <br class="show-mobile desktop-hide">You should accept cookies.
         </p>
         <a href="#" class="cookie-btn">ACCEPT</a> 
     </div>
+
+    <script>
+        const menuBtn = document.querySelector('#menu-button');
+        menuBtn.addEventListener('click', toggleMenu);
+
+        const navContainer = document.querySelector('nav')
+
+        function toggleMenu() {
+            navContainer.classList.toggle('nav-open');
+        }
+    </script>
 
 </body>
 </html>
