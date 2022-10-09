@@ -408,7 +408,7 @@ nav.nav-open button span:nth-child(2) {
   }
   
   .menu a:hover {
-    border-bottom: 6px solid rgb(210, 0, 162);
+    border-bottom: 10px solid rgb(210, 0, 162);
   }
 
   /*Hide or display items in tablet/desktop-mode that are hidden or displayed in mobile-mode*/
